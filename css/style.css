@@ -1,0 +1,296 @@
+@font-face {
+  font-family: 'Roundhand';
+  src: url('../font/ofont.ru_Snell\ Roundhand.woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Veronica';
+  src: url('../font/ofont.ru_Veronica\ script\ One.woff2');
+  font-style: normal;
+  font-weight: 400;
+}
+
+body {
+  background: rgba(255, 122, 83, .1);
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 10px;
+  height: 100%;
+}
+
+.header {
+  max-width: 620px;
+  height: 100vh;
+  margin: 0 auto;
+  background-image: url(../images/header-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.header::after {
+  content: '';
+  background-color: rgb(13, 13, 13, .4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.header__inner {
+  padding: 15px 0 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+}
+
+.header__text,
+.timer__title {
+  font-family: 'Monoton', cursive;
+  font-size: 65px;
+  line-height: 1;
+  z-index: 5;
+}
+
+.title__inner {
+  z-index: 5;
+}
+
+.title {
+  font-size: 100px;
+  line-height: 1;
+  font-family: 'Roundhand';
+  max-width: 320px;
+  color: #fff;
+  z-index: 5;
+  margin: auto 0;
+  font-weight: 700;
+}
+
+.timer__inner {
+  z-index: 5;
+}
+
+.timer__title {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.timer__box {
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.timer__item {
+  font-family: 'Rubik Dirt', cursive;
+  font-size: 18px;
+}
+
+.lds-heart {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  transform: rotate(45deg);
+  transform-origin: 40px 40px;
+}
+
+.lds-heart div {
+  top: 32px;
+  left: 32px;
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  animation: lds-heart 1.2s infinite cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.lds-heart div:after,
+.lds-heart div:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+}
+
+.lds-heart div:before {
+  left: -24px;
+  border-radius: 50% 0 0 50%;
+}
+
+.lds-heart div:after {
+  top: -24px;
+  border-radius: 50% 50% 0 0;
+}
+
+@keyframes lds-heart {
+  0% {
+    transform: scale(0.95);
+  }
+
+  5% {
+    transform: scale(1.1);
+  }
+
+  39% {
+    transform: scale(0.85);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  60% {
+    transform: scale(0.95);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
+}
+
+.lds-hourglass {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-hourglass:after {
+  content: " ";
+  display: block;
+  border-radius: 50%;
+  width: 0;
+  height: 0;
+  margin: 8px;
+  box-sizing: border-box;
+  border: 32px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-hourglass 1.2s infinite;
+}
+
+@keyframes lds-hourglass {
+  0% {
+    transform: rotate(0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+
+  50% {
+    transform: rotate(900deg);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  100% {
+    transform: rotate(1800deg);
+  }
+}
+
+.main__info {
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+.main__text,
+.main__text2,
+.adress {
+  font-family: 'Roundhand';
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.main__text span,
+.data,
+.adress span {
+  font-weight: 400;
+  font-size: 34px;
+  display: block;
+  text-transform: uppercase;
+  font-family: 'Veronica';
+  padding: 20px 0;
+  color: rgb(35, 6, 167);
+}
+
+.main__text2 {
+  padding: 50px 0 20px;
+}
+
+.swiper {
+  height: 300px;
+  width: 225px;
+  margin: 0 auto;
+}
+
+.slide__img {
+  border-radius: 50% 0;
+}
+
+.text__adress {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.footer {
+  background: rgba(255, 174, 115, .1);
+  padding: 30px 0 50px;
+  text-align: center;
+}
+
+.footer__title {
+  font-family: 'Roundhand';
+  font-size: 44px;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer__item-title {
+  margin-bottom: 20px;
+  font-family: 'Roundhand';
+  font-size: 44px;
+  font-weight: 700;
+}
+
+.svg {
+  width: 48px;
+  height: 48px;
+}
+
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width:400px) {
+  .header__text {
+    font-size: 55px;
+  }
+
+  .title {
+    font-size: 85px;
+  }
+}
