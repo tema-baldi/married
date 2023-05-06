@@ -3,7 +3,7 @@ const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
-const timerBox = document.querySelector('.timer__box');
+const timerBox = document.querySelector('.timer__inner');
 const preLoader = document.querySelector('.lds-hourglass');
 
 function updateTimer() {
@@ -22,21 +22,9 @@ function updateTimer() {
   seconds.innerText = secondsTimer < 10 ? '0' + secondsTimer : secondsTimer;
 }
 
-setInterval(updateTimer, 1000);
+setInterval(updateTimer, 1200);
 
 setTimeout(function () {
-  preLoader.remove();
-  timerBox.style.display = 'flex';
-}, 1000)
-
-const swiper = new Swiper('.swiper', {
-  effect: 'fade',
-  fadeEffect: {
-    crossFade: true
-  },
-  autoplay: {
-    delay: 3000,
-    disableOnInteraction: false,
-  },
-});
+  timerBox.style.display = 'block';
+}, 1200)
 
