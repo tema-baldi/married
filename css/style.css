@@ -139,7 +139,7 @@ img {
   animation: fadeIn 1s ease-out both;
 }
 
-.timer__data{
+.timer__data {
   font-size: 22px;
 }
 
@@ -248,7 +248,7 @@ img {
 }
 
 .bottom__img {
-  transform: rotateX(180deg) rotateY(180deg) translateY(45%);
+  transform: rotateX(180deg) rotateY(180deg) translateY(33%);
   z-index: -1;
   position: relative;
   width: 100%;
@@ -266,6 +266,10 @@ img {
   margin: 0 auto 15px;
 }
 
+.text span {
+  text-transform: uppercase;
+}
+
 .text-mod {
   text-transform: uppercase;
   font-size: 25px;
@@ -277,11 +281,17 @@ img {
   margin-top: -34%;
 }
 
+.map .text {
+  font-size: 16px;
+  padding-top: 30px;
+}
+
 .footer {
   padding: 40px 0 60px;
   text-align: center;
   font-size: 25px;
 }
+
 .footer__title {
   margin-bottom: 20px;
   font-weight: 700;
@@ -320,12 +330,17 @@ img {
 }
 
 @media (max-width: 380px) {
-  .title{
+  .title {
     font-size: 65px;
   }
 
   .text {
-    font-size: 13px;
+    font-size: 17px;
+  }
+
+  .map .text{
+    font-size: 12px;
+    line-height: 28px;
   }
 
   .text-mod {
@@ -340,7 +355,7 @@ img {
     font-size: 19px;
   }
 
-  .footer{
+  .footer {
     font-size: 20px;
   }
 }
