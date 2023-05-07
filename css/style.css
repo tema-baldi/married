@@ -29,7 +29,7 @@ img {
 
 .header {
   max-width: 620px;
-  height: 100svh;
+  height: 100dvh;
   /* height: -webkit-fill-available; */
   margin: 0 auto;
   background-image: url(../images/header-bg1.jpg);
