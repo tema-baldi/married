@@ -30,6 +30,7 @@ img {
 .header {
   max-width: 620px;
   height: 100vh;
+  min-height: -webkit-fill-avaible;
   margin: 0 auto;
   background-image: url(../images/header-bg1.jpg);
   background-repeat: no-repeat;
@@ -252,7 +253,6 @@ img {
 }
 
 .text {
-  text-transform: uppercase;
   max-width: 400px;
   font-weight: 700;
   font-size: 20px;
