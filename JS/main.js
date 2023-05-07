@@ -1,12 +1,28 @@
-const changeHeight = () => {
-  let vh = window.innerHeight * 0.01;
-  document.documentElement.style.setProperty('--vh',`${vh}px`);
-};
-changeHeight();
+// const changeHeight = () => {
+//   let vh = window.innerHeight * 0.01;
+//   document.documentElement.style.setProperty('--vh',`${vh}px`);
+// };
+// changeHeight();
 
 // window.addEventListener('resize', () => {
 //   changeHeight();
 // });
+
+(function () {
+  let width = window.innerWidth;
+  let vh = window.innerHeight;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('resize', () => {
+  setTimeout(() => {
+    if (width != window.innerWidth) {
+    let vh = window.innerHeight;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    width = window.innerWidth;
+    }
+  }, 50);
+  });
+})(); 
 
 const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
