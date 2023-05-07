@@ -264,6 +264,7 @@ img {
 }
 
 .text-mod {
+  text-transform: uppercase;
   font-size: 25px;
 }
 
@@ -276,7 +277,6 @@ img {
 .footer {
   padding: 40px 0 60px;
   text-align: center;
-  text-transform: uppercase;
   font-size: 25px;
 }
 .footer__title {
