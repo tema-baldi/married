@@ -4,9 +4,9 @@ const changeHeight = () => {
 };
 changeHeight();
 
-window.addEventListener('resize', () => {
-  changeHeight();
-});
+// window.addEventListener('resize', () => {
+//   changeHeight();
+// });
 
 const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
