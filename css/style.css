@@ -29,8 +29,7 @@ img {
 
 .header {
   max-width: 620px;
-  height: 100dvh;
-  /* height: -webkit-fill-available; */
+  height: calc(var(--vh) * 100);
   margin: 0 auto;
   background-image: url(../images/header-bg1.jpg);
   background-repeat: no-repeat;
