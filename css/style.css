@@ -30,7 +30,7 @@ img {
 .header {
   max-width: 620px;
   height: 100vh;
-  min-height: -webkit-fill-avaible;
+  min-height: -webkit-fill-available;
   margin: 0 auto;
   background-image: url(../images/header-bg1.jpg);
   background-repeat: no-repeat;
