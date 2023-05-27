@@ -14,15 +14,15 @@
   document.documentElement.style.setProperty('--vh', `${vh}px`);
 
   window.addEventListener('resize', () => {
-  setTimeout(() => {
-    if (width != window.innerWidth) {
-    let vh = window.innerHeight;
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
-    width = window.innerWidth;
-    }
-  }, 50);
+    setTimeout(() => {
+      if (width != window.innerWidth) {
+        let vh = window.innerHeight;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        width = window.innerWidth;
+      }
+    }, 50);
   });
-})(); 
+})();
 
 const days = document.querySelector('#days');
 const hours = document.querySelector('#hours');
@@ -53,3 +53,34 @@ setTimeout(function () {
   timerBox.style.display = 'block';
 }, 1200)
 
+ymaps.ready(init);
+function init() {
+  // Создание карты.
+  var myMap = new ymaps.Map("map", {
+    // Координаты центра карты.
+    // Порядок по умолчанию: «широта, долгота».
+    // Чтобы не определять координаты центра карты вручную,
+    // воспользуйтесь инструментом Определение координат.
+    center: [45.035390, 41.901165],
+    // Уровень масштабирования. Допустимые значения:
+    // от 0 (весь мир) до 19.
+    zoom: 17
+  });
+  var myPlacemark = new ymaps.Placemark([45.035390, 41.901165], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '../images/location1.svg',
+    iconImageSize: [50, 50],
+    iconImageOffset: [-20, -40]
+  });
+  // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
+	// myMap.controls.remove('searchControl'); // удаляем поиск
+	myMap.controls.remove('trafficControl'); // удаляем контроль трафика
+	myMap.controls.remove('typeSelector'); // удаляем тип
+
+	// map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+	// map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+	myMap.controls.remove('rulerControl'); // удаляем контрол правил
+	myMap.behaviors.disable(['scrollZoom']); // отключаем скролл карты (опционально)
+
+  myMap.geoObjects.add(myPlacemark);
+}
