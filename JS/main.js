@@ -66,12 +66,14 @@ function init() {
     // от 0 (весь мир) до 19.
     zoom: 17
   });
-  var myPlacemark = new ymaps.Placemark([45.035390, 41.901165], {}, {
-    iconLayout: 'default#image',
-    iconImageHref: './../images/location.svg',
-    iconImageSize: [55, 55],
-    iconImageOffset: [-25, -45]
-  });
+  // var myPlacemark = new ymaps.Placemark([45.035390, 41.901165], {}, {
+  //   iconLayout: 'default#image',
+  //   iconImageHref: './../images/location.svg',
+  //   iconImageSize: [55, 55],
+  //   iconImageOffset: [-25, -45]
+  // });
+
+  var myPlacemark = new ymaps.Placemark([45.035390, 41.901165]);
   // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
 	// myMap.controls.remove('searchControl'); // удаляем поиск
 	myMap.controls.remove('trafficControl'); // удаляем контроль трафика
