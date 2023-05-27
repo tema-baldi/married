@@ -303,13 +303,8 @@ img {
   position: relative;
 }
 
-[class*="copyrights-pane"] {
-  opacity: 0;
-  transition: opacity .2s ease-in;
-}
-
-#map:hover [class*="copyrights-pane"] {
-  opacity: 1;
+[class*="copyright__wrap"] {
+  display: none;
 }
 
 [class*="gototech"] {
