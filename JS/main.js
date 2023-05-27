@@ -73,7 +73,9 @@ function init() {
   //   iconImageOffset: [-25, -45]
   // });
 
-  var myPlacemark = new ymaps.Placemark([45.035390, 41.901165]);
+  var myPlacemark = new ymaps.Placemark([45.035390, 41.901165], {}, {
+    preset: 'islands#blackHeartIcon'
+  }); 
   // myMap.controls.remove('geolocationControl'); // удаляем геолокацию
 	// myMap.controls.remove('searchControl'); // удаляем поиск
 	myMap.controls.remove('trafficControl'); // удаляем контроль трафика
